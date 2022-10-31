@@ -1,14 +1,31 @@
-const colors = ["#1abc9c", "#3498db", "#9b59b6"];
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting")
 
-function windowResize() {
-  const intFrameWidth = window.innerWidth;
-  if (intFrameWidth > 800) {
-    document.body.style.backgroundColor = colors[0];
-  } else if (intFrameWidth > 400 && intFrameWidth <= 800) {
-    document.body.style.backgroundColor = colors[1];
-  } else {
-    document.body.style.backgroundColor = colors[2];
-  }
+const HIDDEN_CLASSNAME = "hidden"
+const USERNAME_KEY = "username"
+
+
+function onLoginSubmit(event) {
+  event.preventDefault();
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  const username = loginInput.value;
+  localStorage.setItem(USERNAME_KEY, username);
+  paintGreeting(username);
 }
 
-window.addEventListener("resize", windowResize);
+function paintGreeting(username){
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+  greeting.innerText = `Hello ${username}`;
+}
+
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if (savedUsername === null) {
+  // show the form
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", onLoginSubmit);
+} else  {
+  // show the greeting
+  paintGreeting(savedUsername);
+}
