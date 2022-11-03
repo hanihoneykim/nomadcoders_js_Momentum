@@ -19,7 +19,7 @@ const colors = [
     "#ff3f34"
   ];
   
-const colorBtn = document.querySelector("#colorBtn");
+const colorBtn = document.querySelector("button");
 
 function btnClick() {
     const firstColor = colors[Math.floor(Math.random() * colors.length)];
