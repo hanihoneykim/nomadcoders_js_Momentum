@@ -1,4 +1,4 @@
-const images =[
+const images = [
     "img1.jpg",
     "img2.jpg",
     "img3.jpeg",
@@ -10,7 +10,7 @@ const images =[
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 
-//const bgImage = document.createElement("img");
+const bgImage = document.createElement("img");
 //bgImage.src = `img/${chosenImage}`
 document.querySelector("body").style = `background:url('img/${chosenImage}')`;
 
