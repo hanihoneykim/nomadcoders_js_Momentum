@@ -2,9 +2,42 @@
     display: none;
 }
 
-body{
+body {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    }
+    text-align: center;
+
+}
+
+.body_container {
+    margin: 100px 0px;
+}
+
+.bottom {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 100px;
+    width: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+button {
+    margin: 5px;
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+ul {
+    list-style: none;
+}
