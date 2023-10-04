@@ -1,1 +1,5 @@
-# JS-Chrome-Momentum-Clone
+# 💻 NomadCoders Momentum Clone Challenge 💻
+
+### skills
+<p> Javascript, css </p>
+
